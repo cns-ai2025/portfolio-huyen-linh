@@ -538,6 +538,89 @@ button {
   font-size: 16px;
 }
 
+.about-stack {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.about-detail {
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  background: rgba(255, 248, 241, 0.9);
+}
+
+.about-detail > span {
+  display: inline-flex;
+  color: var(--muted);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.about-detail h3 {
+  margin: 10px 0 0;
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.08;
+  color: var(--olive);
+}
+
+.about-detail p {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.about-detail-dark {
+  background:
+    linear-gradient(145deg, rgba(47, 53, 41, 0.95), rgba(58, 64, 47, 0.88)),
+    var(--olive);
+}
+
+.about-detail-dark > span,
+.about-detail-dark p {
+  color: rgba(255, 248, 241, 0.78);
+}
+
+.about-detail-dark h3 {
+  color: var(--paper);
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.about-tags span {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--olive);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(217, 167, 176, 0.16);
+}
+
+.about-detail-dark .about-tags span {
+  border-color: rgba(255, 248, 241, 0.22);
+  color: var(--paper);
+  background: rgba(255, 248, 241, 0.08);
+}
+
 .fine-line {
   width: 100%;
   height: 1px;
