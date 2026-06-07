@@ -505,6 +505,10 @@ button {
   grid-column: span 8;
 }
 
+.span-12 {
+  grid-column: 1 / -1;
+}
+
 .card-meta {
   position: relative;
   z-index: 1;
@@ -734,6 +738,123 @@ button {
   color: var(--olive);
   font-size: 13px;
   background: rgba(227, 182, 191, 0.22);
+}
+
+.projects-card {
+  background:
+    linear-gradient(135deg, rgba(255, 248, 241, 0.92), rgba(230, 214, 198, 0.62)),
+    repeating-linear-gradient(90deg, rgba(31, 31, 28, 0.025), rgba(31, 31, 28, 0.025) 1px, transparent 1px, transparent 54px),
+    var(--card);
+}
+
+.project-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.project-week {
+  padding: 18px 18px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 7px;
+  background: rgba(255, 248, 241, 0.86);
+  box-shadow: 0 10px 24px rgba(31, 31, 28, 0.05);
+}
+
+.project-week-head {
+  margin-bottom: 14px;
+}
+
+.project-week-head span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--olive);
+  background: rgba(217, 167, 176, 0.18);
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.project-week h3,
+.summary-block h3 {
+  margin: 12px 0 0;
+  font-family: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--olive);
+}
+
+.project-week p {
+  margin: 12px 0 0;
+  font-size: 15px;
+}
+
+.project-week strong {
+  color: var(--text);
+}
+
+.project-week a {
+  color: var(--olive);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.project-week a:hover {
+  color: var(--muted);
+}
+
+.summary-card {
+  background:
+    linear-gradient(145deg, rgba(47, 53, 41, 0.94), rgba(89, 82, 73, 0.82)),
+    var(--olive);
+  color: var(--paper);
+}
+
+.summary-card::before {
+  border-color: rgba(255, 248, 241, 0.18);
+}
+
+.summary-card .card-meta,
+.summary-card p {
+  color: rgba(255, 248, 241, 0.78);
+}
+
+.summary-card h2,
+.summary-block h3 {
+  color: var(--paper);
+}
+
+.summary-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.summary-block {
+  padding: 18px;
+  border: 1px solid rgba(255, 248, 241, 0.18);
+  border-radius: 7px;
+  background: rgba(255, 248, 241, 0.08);
+  backdrop-filter: blur(6px);
+}
+
+.summary-block p {
+  margin-top: 14px;
+  font-size: 15px;
 }
 
 .contact-card {
@@ -1011,6 +1132,11 @@ button {
 
   .goal-list li:last-child {
     border-bottom: 0;
+  }
+
+  .project-grid,
+  .summary-grid {
+    grid-template-columns: 1fr;
   }
 
   .site-footer {
